@@ -1,1 +1,1 @@
-# grpc-annotations
+# protobuf-go-rest
