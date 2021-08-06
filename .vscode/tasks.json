@@ -1,0 +1,27 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build 'hello-world' proto",
+            "type": "shell",
+            "command": "protoc -I ./examples/hello-world/proto -I ./third_party --go_out ./examples/hello-world/proto --go_opt paths=source_relative ./examples/hello-world/proto/hello_world.proto",
+        },
+        {
+            "label": "build 'hello-world' proto REST",
+            "type": "shell",
+            "command": "protoc -I ./examples/hello-world/proto -I ./third_party --go-rest_out ./examples/hello-world/proto --go-rest_opt paths=source_relative ./examples/hello-world/proto/hello_world.proto",
+        },
+        {
+            "label": "build 'hello-world' all",
+            "type": "shell",
+            "command": "protoc -I ./examples/hello-world/proto -I ./third_party --go_out ./examples/hello-world/proto --go_opt paths=source_relative --go-grpc_out ./examples/hello-world/proto --go-grpc_opt paths=source_relative --grpc-gateway_out ./examples/hello-world/proto --grpc-gateway_opt paths=source_relative ./examples/hello-world/proto/hello_world.proto",
+        },
+        {
+            "label": "build 'gw-hello-world' all",
+            "type": "shell",
+            "command": "protoc -I ./examples/gw-hello-world/proto -I ./third_party --go_out ./examples/gw-hello-world/proto --go_opt paths=source_relative --go-grpc_out ./examples/gw-hello-world/proto --go-grpc_opt paths=source_relative --grpc-gateway_out ./examples/gw-hello-world/proto --grpc-gateway_opt paths=source_relative ./examples/gw-hello-world/proto/hello_world.proto",
+        }
+    ]
+}

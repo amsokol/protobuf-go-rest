@@ -1,0 +1,14 @@
+{
+    "protoc": {
+        "options": [
+            "--proto_path=./third_party"
+        ]
+    },
+    "cSpell.words": [
+        "amsokol",
+        "grpc",
+        "grpclog",
+        "pluginpb",
+        "protoc"
+    ]
+}

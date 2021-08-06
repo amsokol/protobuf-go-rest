@@ -1,0 +1,14 @@
+# Refer to golangci-lint's example config file for more options and information:
+# https://github.com/golangci/golangci-lint/blob/master/.golangci.example.yml
+
+# all available settings of specific linters
+linters-settings:
+
+  exhaustivestruct:
+    # Struct Patterns is list of expressions to match struct packages and names
+    # The struct packages have the form example.com/package.ExampleStruct
+    # The matching patterns can use matching syntax from https://pkg.go.dev/path#Match
+    # If this list is empty, all structs are tested.
+    struct-patterns:
+      - '*.Test'
+      - 'example.com/package.ExampleStruct'
